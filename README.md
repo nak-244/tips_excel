@@ -7,13 +7,12 @@
 
 ### 【セルA15の数式】
 
-```rb
-{=IFERROR(INDEX($A$3:$G$8,MATCH(
+    {=IFERROR(INDEX($A$3:$G$8,MATCH(
 
-LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
+    LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
-1/ROW($A$3:$A$8),0),COLUMNS($A$14:A$14)),"")}
-```
+    1/ROW($A$3:$A$8),0),COLUMNS($A$14:A$14)),"")}
+
 
 このように全部で８個、７種類の関数を使います。正直慣れるまでは大変ですが、使いこなせるようになると便利ですので、順番にやってみましょう。
 
@@ -32,9 +31,9 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-```rb
-=IFERROR(INDEX($A$3:$G$8,
-```
+
+    =IFERROR(INDEX($A$3:$G$8,
+
 
 ちなみに「＄」マークは付けた状態にしてください。
 
@@ -59,9 +58,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-```rb
-=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1
-```
+    =IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1
 
 なお、付けたい条件が複数、例えば「F列が総務部」で「G列が課長」のデータを抜き出したいのであれば、ここは「～LARGE（$F$3:$F$8=”総務部”）*（$G$3:$G$8=”課長”）」などと、条件を「*」で繋いで入力します。
 
@@ -69,10 +66,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【複数条件の場合の数式の例】
 
-```rb
-=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*($G$3:$G$8)="課長"
-```
-
+    =IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*($G$3:$G$8)="課長"
 
 ### ROW関数の部分
 ![5](https://user-images.githubusercontent.com/45871453/59075823-a78b1180-890d-11e9-9fbd-7225a132ef5e.jpg)
@@ -90,9 +84,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-```rb
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),」
-```
+    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),」
 
 ### ROWS関数の部分
 
@@ -114,9 +106,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-```rb
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)), 」
-```
+    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)), 」
 
 そして次に **「1/」** と入力。
 
@@ -128,9 +118,10 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-```rb
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),1/ROW($A$3:$A$8),0),」
-```
+    「=IFERROR(INDEX($A$3:$G$8,MATCH(
+      LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)
+      ),1/ROW($A$3:$A$8),0),」
+
 
 ### COLUMNS関数の部分
 
@@ -152,11 +143,12 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 ![8](https://user-images.githubusercontent.com/45871453/59075880-f3d65180-890d-11e9-98e7-ed587bab5231.jpg)
 
-**【入力した数式】**
+【入力した数式】
 
-```rb
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),1/ROW($A$3:$A$8),0),COLUMNS($A$14:A$14)),"")」
-```
+    =IFERROR(INDEX($A$3:$G$8,MATCH
+    (LARGE(($F$3:$F$8="総務部")*1/ROW(
+      $A$3:$A$8),ROWS($A$15:$A15)),1/ROW
+      ($A$3:$A$8),0),COLUMNS($A$14:A$14)),"")
 
 ### 配列数式にする
 
@@ -170,9 +162,12 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 そうすると、｛｝が付いた次のような計算式が数式バーに表示されるはずです。
 
-```rb
-{=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),1/ROW($A$3:$A$8),0),COLUMNS($A$14:A$14)),"")}
-```
+
+    {=IFERROR(INDEX($A$3:$G$8,MATCH(
+      LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),
+      ROWS($A$15:$A15)),1/ROW($A$3:$A$8),0),
+      COLUMNS($A$14:A$14)),"")}
+
 
 そして、この計算式を入れたセルには条件に当てはまった行の一番左上の値が表示されるはずです（例でいうと「総務部」という条件であれば「１（Ａ列の３行目の値）」）。
 
