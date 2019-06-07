@@ -71,7 +71,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 ```rb
 =IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*($G$3:$G$8)="課長"
-``
+```
 
 
 ### ROW関数の部分
