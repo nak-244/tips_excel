@@ -69,6 +69,7 @@
     =IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*($G$3:$G$8)="課長"
 
 ### ROW関数の部分
+
 ![5](https://user-images.githubusercontent.com/45871453/59075823-a78b1180-890d-11e9-9fbd-7225a132ef5e.jpg)
 
 
@@ -84,7 +85,7 @@
 
 【入力した数式】
 
-    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),」
+    =IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),
 
 ### ROWS関数の部分
 
@@ -106,7 +107,7 @@
 
 【入力した数式】
 
-    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)), 」
+    =IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 そして次に **「1/」** と入力。
 
@@ -118,9 +119,9 @@
 
 【入力した数式】
 
-    「=IFERROR(INDEX($A$3:$G$8,MATCH(
+    =IFERROR(INDEX($A$3:$G$8,MATCH(
       LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)
-      ),1/ROW($A$3:$A$8),0),」
+      ),1/ROW($A$3:$A$8),0),
 
 
 ### COLUMNS関数の部分
