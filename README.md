@@ -32,7 +32,9 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
+```rb
     =IFERROR(INDEX($A$3:$G$8,
+```
 
 ちなみに「＄」マークは付けた状態にしてください。
 
@@ -52,7 +54,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1」
+    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1」
 
 なお、付けたい条件が複数、例えば「F列が総務部」で「G列が課長」のデータを抜き出したいのであれば、ここは「～LARGE（$F$3:$F$8=”総務部”）*（$G$3:$G$8=”課長”）」などと、条件を「*」で繋いで入力します。
 
@@ -60,7 +62,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【複数条件の場合の数式の例】
 
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*($G$3:$G$8)="課長"」
+    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*($G$3:$G$8)="課長"」
 
 ### ROW関数の部分
 ![5](https://user-images.githubusercontent.com/45871453/59075823-a78b1180-890d-11e9-9fbd-7225a132ef5e.jpg)
@@ -78,7 +80,7 @@ LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),ROWS($A$15:$A15)),
 
 【入力した数式】
 
-「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),」
+    「=IFERROR(INDEX($A$3:$G$8,MATCH(LARGE(($F$3:$F$8="総務部")*1/ROW($A$3:$A$8),」
 
 ### ROWS関数の部分
 
